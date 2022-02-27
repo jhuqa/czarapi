@@ -20,6 +20,12 @@ import cloudinary.api
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+cloudinary.config(
+  cloud_name = config('CLOUD_NAME'),
+  api_key = config('CLOUD_API'),
+  api_secret = config('API_SECRET'),
+)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
